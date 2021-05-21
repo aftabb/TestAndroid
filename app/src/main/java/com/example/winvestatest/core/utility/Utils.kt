@@ -1,4 +1,4 @@
-package com.example.androidtest.core
+package com.example.winvestatest.core.utility
 
 import android.content.Context
 import android.net.ConnectivityManager

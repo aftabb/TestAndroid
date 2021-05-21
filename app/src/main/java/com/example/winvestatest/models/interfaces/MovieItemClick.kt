@@ -1,4 +1,4 @@
-package com.example.androidtest.models.interfaces
+package com.example.winvestatest.models.interfaces
 
 interface MovieItemClick {
     fun onItemClick(position: Int, movieId: Int)

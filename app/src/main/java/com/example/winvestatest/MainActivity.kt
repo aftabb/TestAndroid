@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidtest.models.Movies
 import com.example.winvestatest.models.adapters.MoviesAdapter
-import com.example.androidtest.models.interfaces.MovieItemClick
+import com.example.winvestatest.models.interfaces.MovieItemClick
 import com.example.winvestatest.viewmodels.MoviesViewmodel
 import com.example.winvestatest.core.uicomponent.InfiniteScrollingListner
 import com.example.winvestatest.databinding.ActivityMainBinding

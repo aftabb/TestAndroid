@@ -1,6 +1,7 @@
-package com.example.androidtest.models.movieDetails
+package com.example.winvestatest.models.movieDetails
 
 import com.example.winvestatest.models.movieDetails.BelongsToCollection
+import com.example.winvestatest.models.movieDetails.Genre
 
 data class MovieDetails(
     val adult: Boolean,

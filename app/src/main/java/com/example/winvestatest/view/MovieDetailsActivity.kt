@@ -7,10 +7,10 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.example.androidtest.core.AppConfiguration
-import com.example.androidtest.core.Utils
-import com.example.androidtest.models.movieDetails.Genre
-import com.example.androidtest.models.movieDetails.MovieDetails
+import com.example.winvestatest.core.utility.AppConfiguration
+import com.example.winvestatest.core.utility.Utils
+import com.example.winvestatest.models.movieDetails.Genre
+import com.example.winvestatest.models.movieDetails.MovieDetails
 import com.example.winvestatest.R
 import com.example.winvestatest.databinding.ActivityMovieDetailsBinding
 import com.example.winvestatest.viewmodels.MovieDetailsViewmodel

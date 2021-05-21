@@ -1,4 +1,4 @@
-package com.example.androidtest.models.movieDetails
+package com.example.winvestatest.models.movieDetails
 
 data class Genre(
     val id: Int,

@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.androidtest.core.AppConfiguration
-import com.example.androidtest.models.Result
-import com.example.androidtest.models.interfaces.MovieItemClick
+import com.example.winvestatest.core.utility.AppConfiguration
+import com.example.winvestatest.models.Result
+import com.example.winvestatest.models.interfaces.MovieItemClick
 import com.example.winvestatest.databinding.MovieItemBinding
 
 class MoviesAdapter(

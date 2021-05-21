@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.androidtest.core.AppConfiguration
-import com.example.androidtest.models.movieDetails.MovieDetails
+import com.example.winvestatest.core.utility.AppConfiguration
+import com.example.winvestatest.models.movieDetails.MovieDetails
 import com.example.winvestatest.network.ApiService
 import com.example.winvestatest.network.RetroClient
 import kotlinx.coroutines.launch

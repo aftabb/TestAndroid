@@ -1,5 +1,6 @@
 package com.example.androidtest.models
 
+import com.example.winvestatest.models.Result
 import com.google.gson.annotations.SerializedName
 
 data class Movies(
