@@ -1,6 +1,6 @@
 package com.example.winvestatest.network
 
-import com.example.androidtest.models.Movies
+import com.example.winvestatest.models.Movies
 import com.example.winvestatest.models.movieDetails.MovieDetails
 import retrofit2.Response
 import retrofit2.http.GET

@@ -51,7 +51,7 @@ class MoviesAdapter(
                 .load(AppConfiguration.IMAGE_BASE_URL + list[position].poster_path)
                 .into(holder.mBinding.imageView)
         holder.mBinding.imageView.setOnClickListener {
-            movieItemClick.onItemClick(position, list[position].id)
+            movieItemClick.onItemClick(position, list[position].id!!)
         }
 
     }

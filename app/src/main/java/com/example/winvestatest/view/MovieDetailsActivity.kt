@@ -32,20 +32,16 @@ class MovieDetailsActivity : AppCompatActivity() {
         val movieId = intent.getIntExtra("MovieId", 399566)
 
         attachObserver()
-        //checking network availability
-        if (Utils.isNetworkAvailable(this)) {
+        //showing loader
+        Glide
+            .with(this)
+            .load(R.drawable.hour_glass)
+            .into(mBinding.imageView8)
+        mBinding.imageView8.visibility = View.VISIBLE
 
-            Glide
-                .with(this)
-                .load(R.drawable.hour_glass)
-                .into(mBinding.imageView8)
-            mBinding.imageView8.visibility = View.VISIBLE
+        mViewmodel.fetchMovieDetails(movieId)
 
-            mViewmodel.fetchMovieDetails(movieId)
 
-        } else {
-            showError(resources.getString(R.string.no_internet))
-        }
         //closing activity
         mBinding.imageView6.setOnClickListener {
             this.finish()

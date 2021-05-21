@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidtest.models.Movies
+import com.example.winvestatest.models.Movies
 import com.example.winvestatest.models.adapters.MoviesAdapter
 import com.example.winvestatest.models.interfaces.MovieItemClick
 import com.example.winvestatest.viewmodels.MoviesViewmodel
@@ -69,6 +69,11 @@ class MainActivity : AppCompatActivity(), MovieItemClick {
     private fun attachObserver() {
         //movies list observer.
         mMovieViewmodel.getMovies().observe(this, moviesObserver)
+
+        //getting movies from database observer
+        mMovieViewmodel.getMovieFromDb().observe(this, Observer {
+            mAdapter.addItems(it)
+        })
     }
 
     private fun loadMoreMovies(page: Int) {
