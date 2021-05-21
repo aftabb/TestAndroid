@@ -8,7 +8,7 @@ Project Details:
  - Loading data from database if internet is not available.  
  - Room DB for database handling.  
  - ViewBinding for avoiding findViewById in views.
- - Retrofit for newwork calls.  
+ - Retrofit along with kotlin coroutine for newtwork calls.  
  - Android viewmodel for saparating buisness logic from Views.  
  - 100% kotlin.
  
