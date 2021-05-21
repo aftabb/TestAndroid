@@ -14,4 +14,4 @@ Project Details:
  
  
  Notes:  
- Buils is installed and tested in OppoA3s with Version 8(Api level 26).
+ Build is installed and tested in OppoA3s with Version 8(Api level 26).
