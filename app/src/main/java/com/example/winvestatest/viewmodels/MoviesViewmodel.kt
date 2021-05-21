@@ -61,7 +61,7 @@ class MoviesViewmodel(private val context: Application) : AndroidViewModel(conte
     }
 
     /**
-     * Saving records in database for showing offline
+     * Saving records in database for offline purpose
      *
      * @param movies
      */

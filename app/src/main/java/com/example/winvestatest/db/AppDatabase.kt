@@ -13,6 +13,12 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
         var INSTANCE: AppDatabase? = null
 
+        /**
+         * Creating singleton object for Appdatabase
+         *
+         * @param context
+         * @return
+         */
         fun getAppDataBase(context: Context): AppDatabase? {
             if (INSTANCE == null) {
                 synchronized(AppDatabase::class) {

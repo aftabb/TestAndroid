@@ -11,10 +11,15 @@ class RetroClient {
     companion object {
         var retrofit: Retrofit? = null
 
+        /**
+         * Returning Retrofit singleton instance
+         *
+         * @return
+         */
         fun getRetrofitInstance(): Retrofit {
             if (retrofit == null) {
 
-                //adding okhttp client for increasing timeout
+                //adding okhttp client for setting timeout
                 val okHttpClient = OkHttpClient.Builder()
                     .connectTimeout(1, TimeUnit.MINUTES)
                     .readTimeout(30, TimeUnit.SECONDS)
