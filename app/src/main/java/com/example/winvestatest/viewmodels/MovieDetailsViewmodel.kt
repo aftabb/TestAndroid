@@ -17,27 +17,6 @@ class MovieDetailsViewmodel(private val context: Application) : AndroidViewModel
     private val movieDetails = MutableLiveData<MovieDetails>()
     private val apiError = MutableLiveData<String>()
 
-
-    /*   fun fetchMovieDetails(movieId: Int) {
-       val retroClient = RetroClient.getRetrofitInstance().create(ApiService::class.java)
-
-       retroClient.getMovieDetails(movieId, AppConfiguration.mApiKey)
-           .subscribeOn(Schedulers.io())
-           .observeOn(AndroidSchedulers.mainThread())
-           .subscribeWith(object : DisposableSingleObserver<MovieDetails>() {
-               override fun onSuccess(t: MovieDetails?) {
-                   movieDetails.value = t
-               }
-
-               override fun onError(e: Throwable?) {
-                   Log.e(e.toString(), "InError")
-                   apiError.value = e.toString()
-               }
-
-           })
-   }
-   */
-
     fun fetchMovieDetails(movieId: Int) {
 
         if (Utils.isNetworkAvailable(context)) {

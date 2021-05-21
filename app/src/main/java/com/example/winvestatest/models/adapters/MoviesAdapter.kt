@@ -34,7 +34,6 @@ class MoviesAdapter(
         list.addAll(newList)
         val new = list.size
         Log.d("Size", "${list.size}")
-        //notifyDataSetChanged()
         notifyItemRangeInserted(old, new)
     }
 

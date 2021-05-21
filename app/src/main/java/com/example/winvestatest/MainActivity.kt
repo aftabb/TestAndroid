@@ -88,8 +88,4 @@ class MainActivity : AppCompatActivity(), MovieItemClick {
         startActivity(intent)
     }
 
-    private fun showError(errorMessage: String) {
-        Snackbar.make(mBinding.root, errorMessage, Snackbar.LENGTH_LONG).show()
-    }
-
 }
