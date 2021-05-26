@@ -10,6 +10,8 @@ import com.example.winvestatest.models.Movies
 import com.example.winvestatest.models.Result
 import com.example.winvestatest.network.ApiService
 import com.example.winvestatest.network.RetroClient
+import com.example.winvestatest.repositories.MovieRepository
+import kotlinx.coroutines.flow.collect
 
 import kotlinx.coroutines.launch
 import java.util.concurrent.Executor
@@ -19,7 +21,8 @@ class MoviesViewmodel(private val context: Application) : AndroidViewModel(conte
 
     init {
         //calling default
-        fetchMovies(1)
+        //fetchMovies(1)
+        searchMovie()
     }
 
     private val movies = MutableLiveData<Movies>()
@@ -90,5 +93,14 @@ class MoviesViewmodel(private val context: Application) : AndroidViewModel(conte
 
     fun showError(): LiveData<String> {
         return error
+    }
+
+    fun searchMovie() {
+        val movieRepository = MovieRepository()
+        viewModelScope.launch {
+            movieRepository.fetchMovies().collect {
+                movies.value = it
+            }
+        }
     }
 }

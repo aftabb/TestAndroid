@@ -15,8 +15,9 @@ import com.example.winvestatest.viewmodels.MoviesViewmodel
 import com.example.winvestatest.core.uicomponent.InfiniteScrollingListner
 import com.example.winvestatest.databinding.ActivityMainBinding
 import com.example.winvestatest.view.MovieDetailsActivity
-import com.google.android.material.snackbar.Snackbar
+import kotlinx.coroutines.InternalCoroutinesApi
 
+@InternalCoroutinesApi
 class MainActivity : AppCompatActivity(), MovieItemClick {
 
     private lateinit var mMovieViewmodel: MoviesViewmodel
@@ -70,6 +71,7 @@ class MainActivity : AppCompatActivity(), MovieItemClick {
         //movies list observer.
         mMovieViewmodel.getMovies().observe(this, moviesObserver)
 
+
         //getting movies from database observer
         mMovieViewmodel.getMovieFromDb().observe(this, Observer {
             mAdapter.addItems(it)
@@ -78,7 +80,7 @@ class MainActivity : AppCompatActivity(), MovieItemClick {
 
     private fun loadMoreMovies(page: Int) {
         //loading more movie on scroll based on search/normal
-        mMovieViewmodel.fetchMovies(page + 1)
+        //mMovieViewmodel.fetchMovies(page + 1)
     }
 
     override fun onItemClick(position: Int, movieId: Int) {
